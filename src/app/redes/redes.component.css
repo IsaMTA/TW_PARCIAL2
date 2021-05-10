@@ -1,0 +1,73 @@
+/*********************** APP Y REDES *****************/
+.apps{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(255, 204, 204);
+}
+
+.apps div{
+    display: flex;
+}
+
+#btn1{
+    background-image: url('../img/play3.png');
+    width: 6.3rem;
+    height: 2rem;
+    border: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#btn1:hover{
+    background-image: url('../img/play4.png');
+}
+
+#btn2{
+    background-image: url('../img/app3.png');
+    width: 6.3rem;
+    height: 2rem;
+    border: none;
+}
+
+#btn2:hover{
+    background-image: url('../img/app4.png');
+}
+
+#redes{
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem;
+}
+
+.fa, .fas {
+  padding: 10px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+    margin-left: 1rem;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}

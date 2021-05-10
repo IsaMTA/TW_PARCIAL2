@@ -1,0 +1,153 @@
+<section class="registro">
+    <header>
+        <pre><h1><span>Regístrate en Mi WIntermex</span>
+y disfruta de muchos beneficios</h1></pre>
+    </header>
+    <div class="formulario">
+        <form novalidate (ngSubmit)="onSave()" [formGroup]="contactForm">
+            <fieldset>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <p>1. Selecciona el tipo de servicio que deseas registrar:</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="r1">
+                                <input type="radio" name="tipo" id="hogar">
+                                <label for="hogar"> Registro Hogar</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="r2">
+                                <input type="radio" name="tipo" id="negocio">
+                                <label for="negocio"> Registro Negocio</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p>2. Crea tu cuenta ingresando correctamente todos los datos:</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="light">
+                            <label for="win">Número WIntermex:</label> <br>
+                            <input type="tel" class="form-control" placeholder="Ej. 123-456-1845" id="win" name="tel" formControlName="tel" [class]="isValidField('tel')">
+                            <div class="invalid-feedback">
+                                <span *ngIf="contactForm.get('tel')?.errors?.required">
+                                    Por favor ingrese su número WIntermex.
+                                </span>
+                                <span *ngIf="contactForm.get('tel')?.errors?.pattern">
+                                    Por favor ingrese su número WIntermex correctamente.
+                                </span>
+                            </div>
+                        </td>
+                        <td id="light">
+                            <label for="correo">Correo electrónico:</label> <br>
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="ejemplo@gmail.com" formControlName="correo" [class]="isValidField('correo')">
+                            <div class="invalid-feedback">
+                                <span *ngIf="contactForm.get('correo')?.errors?.required">
+                                    Por favor ingrese su correo electrónico.
+                                </span>
+                                <span *ngIf="contactForm.get('correo')?.errors?.pattern">
+                                    Por favor ingrese un correo electrónico VÁLIDO.
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="light">
+                            <label for="pwd">Contraseña:</label> <br>
+                            <input type="password" class="form-control" name="pwd" id="pwd" 
+                            formControlName="pwd" [class]="isValidField('pwd')">
+                            <div class="invalid-feedback">
+                                <span *ngIf="contactForm.get('pwd')?.errors?.required">
+                                    Por favor ingrese su contraseña.
+                                </span>
+                                <span *ngIf="contactForm.get('pwd')?.errors?.minlength">
+                                    La contraseña debe tener como mínimo 
+                                    {{ contactForm.get('pwd')?.errors?.minlength?.requiredLength }} carácteres.
+                                </span>
+                            </div>
+                        </td>
+                        <td id="light">
+                            <label for="pwdC">Confirma tu constraseña:</label> <br>
+                            <input type="password"  class="form-control" name="pwdC" id="pwdC" formControlName="pwdc" [class]="isValidField('pwdc')">
+                            <div class="invalid-feedback">
+                                <span *ngIf="contactForm.get('pwdc')?.errors?.required">
+                                    Por favor confirme su contraseña.
+                                </span>
+                                <span *ngIf="contactForm.get('pwd')?.value != contactForm.get('pwdc')?.value;">
+                                    La contraseña no coincide.
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="alerta">
+                            <pre>La constraseña debe tener mínimo 8 cracateres, iniciar con una letra e incluir al menos un número; puedes utilizar los
+signos (# % . + - _ ?). No debes ingresar más de dos elementos iguales en forma consecutiva ni palabras reservadas
+(WIntermex, Infinitum).</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="light">
+                            <label for="nombre">Nombre(s):</label> <br>
+                            <input type="text" class="form-control" name="nombre" id="nombre" formControlName="nombre" [class]="isValidField('nombre')">
+                            <div class="invalid-feedback">
+                                <span *ngIf="contactForm.get('nombre')?.errors?.required">
+                                    Por favor ingrese su nombre.
+                                </span>
+                            </div>
+                        </td>
+                        <td id="light">
+                            <label for="apPat">Apellido Paterno:</label> <br>
+                            <input type="text" class="form-control" name="apPat" id="apPat" formControlName="apPat" [class]="isValidField('apPat')">
+                            <div class="invalid-feedback">
+                                <span *ngIf="contactForm.get('apPat')?.errors?.required">
+                                    Por favor ingrese su apellido paterno.
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="light">
+                            <label for="apMat">Apellido Materno:</label> <br>
+                            <input type="text" class="form-control" name="apMat" id="apMat" formControlName="apMat" [class]="isValidField('apMat')">
+                            <div class="invalid-feedback">
+                                <span *ngIf="contactForm.get('apMat')?.errors?.required">
+                                    Por favor ingrese su apellido materno.
+                                </span>
+                            </div>
+                        </td>
+                        <td id="light">
+                            <label for="cel">Número celular de contacto:</label> <br>
+                            <input type="tel" placeholder="Ej. 123-456-1845" class="form-control"id="cel" name="cel" formControlName="cel"
+                            [class]="isValidField('cel')">
+                            <div class="invalid-feedback">
+                                <span *ngIf="contactForm.get('cel')?.errors?.required">
+                                    Por favor ingrese su número.
+                                </span>
+                                <span *ngIf="contactForm.get('cel')?.errors?.pattern">
+                                    Por favor ingrese su número correctamente.
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="btn btn-danger btn-block" id="enviar">ENVIAR</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a routerLink="/home-component" routerLinkActive="active" id="return">Regresar</a>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</section>

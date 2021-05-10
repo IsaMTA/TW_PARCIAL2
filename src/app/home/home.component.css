@@ -1,0 +1,51 @@
+  .text {
+    color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: relative;
+    bottom: 8px;
+    top: -300px;
+    left: 800px;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  #activar{
+      border-radius: 0;
+      border-style: none;
+      background-color: red;
+      color: white;
+      width: 200px;
+      height: 30px;
+  }
+  
+  #activar:hover{
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),
+       0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  
+  #anuncio{
+      color: darkred;
+      font-weight: bolder;
+      font-size: 25px;
+  }
+  
+  #covid{
+      color: white;
+  }
+  
+  #oferta{
+      width: 300px;
+      height: 100px;
+      padding: 1rem;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  

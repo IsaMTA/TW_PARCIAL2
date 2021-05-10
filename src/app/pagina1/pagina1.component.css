@@ -1,0 +1,74 @@
+pre{
+    font-family: 'Rubik', sans-serif;
+}
+
+header{
+    text-align: center;
+    font-size: 25px;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+}
+
+fieldset{
+    text-align: center;
+    border: 0;
+}
+
+#r1, #r2, #chbx{
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 230, 230);
+    border-radius: 10px;
+}
+
+table{
+    padding: 4rem;
+    border: 0;
+}
+
+td{
+    padding: 1rem;
+}
+
+#light{
+    background-color: rgb(255, 230, 230);
+}
+
+#alerta{
+    color: darkred;
+    font-weight: bold;
+}
+
+#oferta, #recibo{
+    width: 25px;
+    height: 25px;
+}
+
+table input{
+    border-radius: 3px;
+}
+
+#enviar{
+    border: 0;
+    background-color: red;
+    color: white;
+    width: 100%;
+}
+
+#enviar:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 
+    0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#return{
+    color: black;
+    text-decoration: none;
+}
+
+#return:hover{
+    text-decoration: overline;
+    color: rgb(189, 3, 3);
+}

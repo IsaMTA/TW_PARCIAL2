@@ -1,0 +1,30 @@
+<nav id="menuPequeño">
+    <ul>
+        <li><a href="#" class="der">Hogar</a></li>
+        <li><a href="#" class="der">Negocio</a></li>
+        <li><a href="#" class="der">Empresa</a></li>
+    </ul>
+    <ul>
+        <li><a href="#" class="izq">Claro Shop</a></li>
+        <li><a href="#" class="izq">Centro de Atención WIntermex - Sitios Wifi</a></li>
+    </ul>    
+  </nav>
+
+<!-- En esta sección se definen las rutas de los elementos a desplegar -->
+  <nav id="menuGrande">
+    <ul>
+        <img [src]="'assets/img/logo.jpg'" id="logo" alt="" onclick="">
+        <li><a routerLink="/home-component" routerLinkActive="active">Inicio</a></li>
+        <li><a routerLink="/pagina2-component" routerLinkActive="active">Servicios</a></li>
+        <li><a routerLink="/pagina1-component" routerLinkActive="active"><span id="mi">Mi WIntermex</span></a></li>
+    </ul>
+    
+    <ul>
+        <li class="izq">
+            <div class="dropdown">
+                <button class="dropbtn"><i class="far fa-user"><span> Mi Cuenta </span></i>
+                <i class="fas fa-angle-down"></i></button>
+            </div>
+        </li>
+    </ul>
+  </nav>

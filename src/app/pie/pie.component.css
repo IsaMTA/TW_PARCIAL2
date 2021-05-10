@@ -1,0 +1,45 @@
+/************************ FINAL ***********************/
+#telSlim{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 204, 204);
+}
+
+#telcel{
+    background-image: url('../img/telcel.png');
+    width: 22rem;
+    height: 4.5rem;
+    border: none;
+    margin-right: 1rem;
+}
+
+#slim{
+    background-image: url('../img/slim.png');
+    width: 22rem;
+    height: 4.5rem;
+    border: none;
+    margin-left: 1rem;
+}
+
+#final{
+    padding-top: 2rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    background-color: rgb(255, 204, 204);
+}
+
+#final pre{
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#final a{
+    color: darkred;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#final a:hover{
+    color: darkblue;
+}
